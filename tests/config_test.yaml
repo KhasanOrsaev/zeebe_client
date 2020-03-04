@@ -1,0 +1,3 @@
+host: test.api-events.cs22.ru
+port: 26500
+workers: 1000
