@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="434e7f5c-ea8d-4dd1-a1f9-a64e65be7614" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/config_test.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/config_test.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/writeData_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/writeData_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/writeData.go" beforeDir="false" afterPath="$PROJECT_DIR$/writeData.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zeebe.go" beforeDir="false" afterPath="$PROJECT_DIR$/zeebe.go" afterDir="false" />
-    </list>
+    <list default="true" id="434e7f5c-ea8d-4dd1-a1f9-a64e65be7614" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
