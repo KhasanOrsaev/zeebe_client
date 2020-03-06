@@ -8,6 +8,9 @@ import (
 type Configuration struct {
 	Host     string `yaml:"host"`
 	Port string `yaml:"port"`
+	User string `yaml:"user"`
+	Password string `yaml:"password"`
+	Tls string `yaml:"tls"`
 	Workers int `yaml:"workers"`
 }
 

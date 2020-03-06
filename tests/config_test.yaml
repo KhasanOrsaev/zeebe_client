@@ -1,3 +1,8 @@
-host: test.api-events.cs22.ru
+#host: 5fc2513b-fc96-4156-aa42-9f4286171b93.zeebe.camunda.io
+#port: 443
+#user: HJN1sToVh002C93hWkBUtRiblQdwTCf5
+#password: JHtdINgIJ_31Uz3O3Shj3RhMEHy5HTGDlZLPj5t9udS4r5qT5ANGuZQ2AKQqwn0_
+host: localhost
 port: 26500
-workers: 1000
+workers: 200
+tls: true

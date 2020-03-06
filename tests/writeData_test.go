@@ -33,9 +33,9 @@ func TestWriteData(t *testing.T)  {
 	}
 	defer client.CloseConnection()
 
-	data1 := []byte(`{"zeebe":{"process_id" : "test","variables":{}}}`)
+	data1 := []byte(`{"zeebe":{"process_id" : "test2","variables":{}}}`)
 	go func() {
-		for i:= 0; i<10000; i++ {
+		for i:= 0; i<1000; i++ {
 			outChannel <- map[interface{}][]byte{1:data1}
 		}
 		close(outChannel)
@@ -51,11 +51,14 @@ func TestWriteData(t *testing.T)  {
 	}()
 
 	go func() {
+		i := 0
 		for b := range crashChannel {
+			i++
 			for i := range b {
-				t.Error("crash uuid:", i.String())
+				fmt.Println("crash uuid:", i.String())
 			}
 		}
+		fmt.Println("errors: ", i)
 		ws.Done()
 	}()
 	go func() {

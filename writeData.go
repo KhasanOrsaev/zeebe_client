@@ -65,7 +65,6 @@ func (client *ZeebeClient) WriteData(outChannel <-chan map[interface{}][]byte, c
 						}).Error(err.Error())
 						continue
 					}
-
 					// send to zeebe
 					msg, err := request.Send(context.Background())
 					if err != nil {

@@ -23,13 +23,35 @@ func (client *ZeebeClient) SetConfig(f []byte) error {
 }
 
 func (client *ZeebeClient) OpenConnection() error {
-	client.Client, err = zbc.NewClient(&zbc.ClientConfig{
-		GatewayAddress:         client.Configuration.Host + ":" + client.Configuration.Port,
-		UsePlaintextConnection: true,
-	})
-	if err!= nil {
-		return errors.Wrap(err, -1)
+	if client.Configuration.Tls == "false" {
+		client.Client, err = zbc.NewClient(&zbc.ClientConfig{
+			GatewayAddress: client.Configuration.Host + ":" + client.Configuration.Port,
+			UsePlaintextConnection: true,
+		})
+		if err!= nil {
+			return errors.Wrap(err, -1)
+		}
+	} else {
+		credsProvider, err := zbc.NewOAuthCredentialsProvider(&zbc.OAuthProviderConfig{
+			ClientID: client.Configuration.User,
+			ClientSecret: client.Configuration.Password,
+			Audience: client.Configuration.Host,
+		})
+		if err!= nil {
+			return errors.Wrap(err, -1)
+		}
+
+		client.Client, err = zbc.NewClient(&zbc.ClientConfig{
+			GatewayAddress: client.Configuration.Host + ":" + client.Configuration.Port,
+			CredentialsProvider: credsProvider,
+			//UsePlaintextConnection: true,
+		})
+
+		if err!= nil {
+			return errors.Wrap(err, -1)
+		}
 	}
+
 	return nil
 }
 
