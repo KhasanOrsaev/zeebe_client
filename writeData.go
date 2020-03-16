@@ -6,7 +6,6 @@ import (
 	"github.com/go-errors/errors"
 	"github.com/google/uuid"
 	log "github.com/sirupsen/logrus"
-	"os"
 	"sync"
 )
 
@@ -21,7 +20,7 @@ type Request struct {
 }
 
 func (client *ZeebeClient) WriteData(outChannel <-chan map[interface{}][]byte, confirmChannel chan<- interface{},
-	crashChannel chan<- map[uuid.UUID][]byte, logger interface{}, sigchan chan os.Signal) {
+	crashChannel chan<- map[uuid.UUID][]byte, logger interface{}) {
 	ws := sync.WaitGroup{}
 	ws.Add(client.Configuration.Workers)
 	for i := 0; i < client.Configuration.Workers; i++ {

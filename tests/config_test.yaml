@@ -4,5 +4,5 @@
 #password: JHtdINgIJ_31Uz3O3Shj3RhMEHy5HTGDlZLPj5t9udS4r5qT5ANGuZQ2AKQqwn0_
 host: localhost
 port: 26500
-workers: 200
-tls: true
+workers: 5
+tls: false

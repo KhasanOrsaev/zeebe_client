@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="434e7f5c-ea8d-4dd1-a1f9-a64e65be7614" name="Default Changelist" comment="" />
+    <list default="true" id="434e7f5c-ea8d-4dd1-a1f9-a64e65be7614" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/config_test.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/config_test.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/writeData_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/writeData_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/writeData.go" beforeDir="false" afterPath="$PROJECT_DIR$/writeData.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zeebe.cfg.toml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +55,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../dispatcher_docker" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -62,6 +69,24 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="TestWriteData in git.fin-dev.ru/dmp/zeebe_client.git/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="zeebe_client.git" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="git.fin-dev.ru/dmp/zeebe_client.git/tests" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestWriteData$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.TestWriteData in git.fin-dev.ru/dmp/zeebe_client.git/tests" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -70,10 +95,30 @@
     <proxy>direct</proxy>
   </component>
   <component name="WindowStateProjectService">
-    <state x="784" y="317" width="424" height="484" key="FileChooserDialogImpl" timestamp="1583251704135">
+    <state x="784" y="317" width="424" height="484" key="FileChooserDialogImpl" timestamp="1584020760563">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="2663" y="297" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583243276167" />
-    <state x="784" y="317" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583251704135" />
+    <state x="2663" y="297" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583837957778" />
+    <state x="784" y="317" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1584020760563" />
+    <state width="1874" height="287" key="GridCell.Tab.0.bottom" timestamp="1583846547670">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1874" height="287" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583828418963" />
+    <state width="1874" height="287" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583846547670" />
+    <state width="1874" height="287" key="GridCell.Tab.0.center" timestamp="1583846547670">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1874" height="287" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583828418963" />
+    <state width="1874" height="287" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583846547670" />
+    <state width="1874" height="287" key="GridCell.Tab.0.left" timestamp="1583846547670">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1874" height="287" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583828418963" />
+    <state width="1874" height="287" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583846547670" />
+    <state width="1874" height="287" key="GridCell.Tab.0.right" timestamp="1583846547670">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1874" height="287" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583828418963" />
+    <state width="1874" height="287" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583846547670" />
   </component>
 </project>

@@ -6,15 +6,13 @@ import (
 	"github.com/google/uuid"
 	"github.com/sirupsen/logrus"
 	"io/ioutil"
-	"os"
 	"sync"
 	"testing"
+	"time"
 )
 
 func TestWriteData(t *testing.T)  {
 	logger := logrus.WithField("test", "yes")
-	sigchan := make(chan os.Signal, 1)
-	//signal.Notify(sigchan, syscall.SIGINT, syscall.SIGTERM)
 	outChannel := make(chan map[interface{}][]byte, 100)
 	confirmChannel := make(chan interface{})
 	crashChannel := make(chan map[uuid.UUID][]byte)
@@ -33,9 +31,9 @@ func TestWriteData(t *testing.T)  {
 	}
 	defer client.CloseConnection()
 
-	data1 := []byte(`{"zeebe":{"process_id" : "test2","variables":{}}}`)
+	data1 := []byte(`{"zeebe":{"process_id" : "test_kafka_2","variables":{"name":"lalala", "key":"2", "lls": "dsw"}}}`)
 	go func() {
-		for i:= 0; i<1000; i++ {
+		for i:= 0; i<1; i++ {
 			outChannel <- map[interface{}][]byte{1:data1}
 		}
 		close(outChannel)
@@ -44,9 +42,11 @@ func TestWriteData(t *testing.T)  {
 	ws := sync.WaitGroup{}
 	ws.Add(3)
 	go func() {
-		client.WriteData(outChannel, confirmChannel, crashChannel, logger, sigchan)
+		t := time.Now()
+		client.WriteData(outChannel, confirmChannel, crashChannel, logger)
 		close(confirmChannel)
 		close(crashChannel)
+		fmt.Println("all instances sended by ", time.Since(t).Seconds(), " seconds")
 		ws.Done()
 	}()
 
